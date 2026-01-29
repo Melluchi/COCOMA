@@ -1,0 +1,518 @@
+name: EOSCSP_1
+objective: max
+domains:
+  time_6:
+    values:
+    - NONE
+    - 29.81
+  time_3:
+    values:
+    - NONE
+    - 26.0
+    - 31.0
+    - 36.0
+  time_5:
+    values:
+    - NONE
+    - 25.68
+    - 30.68
+  time_14:
+    values:
+    - NONE
+    - 59.22
+    - 64.22
+    - 69.22
+  time_7:
+    values:
+    - NONE
+    - 22.39
+    - 27.39
+  time_4:
+    values:
+    - NONE
+    - 25.62
+    - 30.62
+    - 35.62
+  time_8:
+    values:
+    - NONE
+    - 12.61
+  time_9:
+    values:
+    - NONE
+    - 40.36
+  time_0:
+    values:
+    - NONE
+    - 67.75
+  time_10:
+    values:
+    - NONE
+    - 39.67
+  time_15:
+    values:
+    - NONE
+    - 52.25
+    - 57.25
+    - 62.25
+  time_11:
+    values:
+    - NONE
+    - 39.81
+  time_17:
+    values:
+    - NONE
+    - 44.21
+    - 49.21
+    - 54.21
+    - 59.21
+  time_12:
+    values:
+    - NONE
+    - 65.6
+    - 70.6
+    - 75.6
+  time_1:
+    values:
+    - NONE
+    - 68.3
+    - 73.3
+    - 78.3
+  time_16:
+    values:
+    - NONE
+    - 58.06
+  time_2:
+    values:
+    - NONE
+    - 69.69
+    - 74.69
+  time_13:
+    values:
+    - NONE
+    - 36.98
+    - 41.98
+variables:
+  x_6:
+    domain: time_6
+  x_3:
+    domain: time_3
+  x_5:
+    domain: time_5
+  x_14:
+    domain: time_14
+  x_7:
+    domain: time_7
+  x_4:
+    domain: time_4
+  x_8:
+    domain: time_8
+  x_9:
+    domain: time_9
+  x_0:
+    domain: time_0
+  x_10:
+    domain: time_10
+  x_15:
+    domain: time_15
+  x_11:
+    domain: time_11
+  x_17:
+    domain: time_17
+  x_12:
+    domain: time_12
+  x_1:
+    domain: time_1
+  x_16:
+    domain: time_16
+  x_2:
+    domain: time_2
+  x_13:
+    domain: time_13
+constraints:
+  reward_6:
+    type: intention
+    function: 37.20230197574571 if x_6 != 'NONE' else 0
+  reward_3:
+    type: intention
+    function: 46.58249959776667 if x_3 != 'NONE' else 0
+  reward_5:
+    type: intention
+    function: 46.58249959776667 if x_5 != 'NONE' else 0
+  reward_14:
+    type: intention
+    function: 44.34190068607893 if x_14 != 'NONE' else 0
+  reward_7:
+    type: intention
+    function: 37.20230197574571 if x_7 != 'NONE' else 0
+  reward_4:
+    type: intention
+    function: 46.58249959776667 if x_4 != 'NONE' else 0
+  reward_8:
+    type: intention
+    function: 37.20230197574571 if x_8 != 'NONE' else 0
+  reward_9:
+    type: intention
+    function: 11.811208274832527 if x_9 != 'NONE' else 0
+  reward_0:
+    type: intention
+    function: 11.068995430703474 if x_0 != 'NONE' else 0
+  reward_10:
+    type: intention
+    function: 11.811208274832527 if x_10 != 'NONE' else 0
+  reward_15:
+    type: intention
+    function: 27.83542031568307 if x_15 != 'NONE' else 0
+  reward_11:
+    type: intention
+    function: 11.811208274832527 if x_11 != 'NONE' else 0
+  reward_17:
+    type: intention
+    function: 27.83542031568307 if x_17 != 'NONE' else 0
+  reward_12:
+    type: intention
+    function: 44.34190068607893 if x_12 != 'NONE' else 0
+  reward_1:
+    type: intention
+    function: 11.068995430703474 if x_1 != 'NONE' else 0
+  reward_16:
+    type: intention
+    function: 27.83542031568307 if x_16 != 'NONE' else 0
+  reward_2:
+    type: intention
+    function: 11.068995430703474 if x_2 != 'NONE' else 0
+  reward_13:
+    type: intention
+    function: 44.34190068607893 if x_13 != 'NONE' else 0
+  no_overlap_6_5:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_5 != 'NONE' and not (x_6+9.78422627523168
+      <= x_5 or x_5+7.035273863480027 <= x_6)) else 0
+  no_overlap_6_7:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_7 != 'NONE' and not (x_6+9.78422627523168
+      <= x_7 or x_7+9.78422627523168 <= x_6)) else 0
+  no_overlap_6_9:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_9 != 'NONE' and not (x_6+9.78422627523168
+      <= x_9 or x_9+8.280555812787778 <= x_6)) else 0
+  no_overlap_6_0:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_0 != 'NONE' and not (x_6+9.78422627523168
+      <= x_0 or x_0+7.805869882872122 <= x_6)) else 0
+  no_overlap_6_10:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_10 != 'NONE' and not (x_6+9.78422627523168
+      <= x_10 or x_10+8.280555812787778 <= x_6)) else 0
+  no_overlap_6_15:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_15 != 'NONE' and not (x_6+9.78422627523168
+      <= x_15 or x_15+3.788554880110552 <= x_6)) else 0
+  no_overlap_6_11:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_11 != 'NONE' and not (x_6+9.78422627523168
+      <= x_11 or x_11+8.280555812787778 <= x_6)) else 0
+  no_overlap_6_12:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_12 != 'NONE' and not (x_6+9.78422627523168
+      <= x_12 or x_12+4.319359283724851 <= x_6)) else 0
+  no_overlap_6_1:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_1 != 'NONE' and not (x_6+9.78422627523168
+      <= x_1 or x_1+7.805869882872122 <= x_6)) else 0
+  no_overlap_6_16:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_16 != 'NONE' and not (x_6+9.78422627523168
+      <= x_16 or x_16+3.788554880110552 <= x_6)) else 0
+  no_overlap_6_2:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_2 != 'NONE' and not (x_6+9.78422627523168
+      <= x_2 or x_2+7.805869882872122 <= x_6)) else 0
+  no_overlap_6_13:
+    type: intention
+    function: -1000000 if (x_6 != 'NONE' and x_13 != 'NONE' and not (x_6+9.78422627523168
+      <= x_13 or x_13+4.319359283724851 <= x_6)) else 0
+  no_overlap_5_7:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_7 != 'NONE' and not (x_5+7.035273863480027
+      <= x_7 or x_7+9.78422627523168 <= x_5)) else 0
+  no_overlap_5_9:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_9 != 'NONE' and not (x_5+7.035273863480027
+      <= x_9 or x_9+8.280555812787778 <= x_5)) else 0
+  no_overlap_5_0:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_0 != 'NONE' and not (x_5+7.035273863480027
+      <= x_0 or x_0+7.805869882872122 <= x_5)) else 0
+  no_overlap_5_10:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_10 != 'NONE' and not (x_5+7.035273863480027
+      <= x_10 or x_10+8.280555812787778 <= x_5)) else 0
+  no_overlap_5_15:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_15 != 'NONE' and not (x_5+7.035273863480027
+      <= x_15 or x_15+3.788554880110552 <= x_5)) else 0
+  no_overlap_5_11:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_11 != 'NONE' and not (x_5+7.035273863480027
+      <= x_11 or x_11+8.280555812787778 <= x_5)) else 0
+  no_overlap_5_12:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_12 != 'NONE' and not (x_5+7.035273863480027
+      <= x_12 or x_12+4.319359283724851 <= x_5)) else 0
+  no_overlap_5_1:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_1 != 'NONE' and not (x_5+7.035273863480027
+      <= x_1 or x_1+7.805869882872122 <= x_5)) else 0
+  no_overlap_5_16:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_16 != 'NONE' and not (x_5+7.035273863480027
+      <= x_16 or x_16+3.788554880110552 <= x_5)) else 0
+  no_overlap_5_2:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_2 != 'NONE' and not (x_5+7.035273863480027
+      <= x_2 or x_2+7.805869882872122 <= x_5)) else 0
+  no_overlap_5_13:
+    type: intention
+    function: -1000000 if (x_5 != 'NONE' and x_13 != 'NONE' and not (x_5+7.035273863480027
+      <= x_13 or x_13+4.319359283724851 <= x_5)) else 0
+  no_overlap_7_9:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_9 != 'NONE' and not (x_7+9.78422627523168
+      <= x_9 or x_9+8.280555812787778 <= x_7)) else 0
+  no_overlap_7_0:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_0 != 'NONE' and not (x_7+9.78422627523168
+      <= x_0 or x_0+7.805869882872122 <= x_7)) else 0
+  no_overlap_7_10:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_10 != 'NONE' and not (x_7+9.78422627523168
+      <= x_10 or x_10+8.280555812787778 <= x_7)) else 0
+  no_overlap_7_15:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_15 != 'NONE' and not (x_7+9.78422627523168
+      <= x_15 or x_15+3.788554880110552 <= x_7)) else 0
+  no_overlap_7_11:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_11 != 'NONE' and not (x_7+9.78422627523168
+      <= x_11 or x_11+8.280555812787778 <= x_7)) else 0
+  no_overlap_7_12:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_12 != 'NONE' and not (x_7+9.78422627523168
+      <= x_12 or x_12+4.319359283724851 <= x_7)) else 0
+  no_overlap_7_1:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_1 != 'NONE' and not (x_7+9.78422627523168
+      <= x_1 or x_1+7.805869882872122 <= x_7)) else 0
+  no_overlap_7_16:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_16 != 'NONE' and not (x_7+9.78422627523168
+      <= x_16 or x_16+3.788554880110552 <= x_7)) else 0
+  no_overlap_7_2:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_2 != 'NONE' and not (x_7+9.78422627523168
+      <= x_2 or x_2+7.805869882872122 <= x_7)) else 0
+  no_overlap_7_13:
+    type: intention
+    function: -1000000 if (x_7 != 'NONE' and x_13 != 'NONE' and not (x_7+9.78422627523168
+      <= x_13 or x_13+4.319359283724851 <= x_7)) else 0
+  no_overlap_9_0:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_0 != 'NONE' and not (x_9+8.280555812787778
+      <= x_0 or x_0+7.805869882872122 <= x_9)) else 0
+  no_overlap_9_10:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_10 != 'NONE' and not (x_9+8.280555812787778
+      <= x_10 or x_10+8.280555812787778 <= x_9)) else 0
+  no_overlap_9_15:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_15 != 'NONE' and not (x_9+8.280555812787778
+      <= x_15 or x_15+3.788554880110552 <= x_9)) else 0
+  no_overlap_9_11:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_11 != 'NONE' and not (x_9+8.280555812787778
+      <= x_11 or x_11+8.280555812787778 <= x_9)) else 0
+  no_overlap_9_12:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_12 != 'NONE' and not (x_9+8.280555812787778
+      <= x_12 or x_12+4.319359283724851 <= x_9)) else 0
+  no_overlap_9_1:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_1 != 'NONE' and not (x_9+8.280555812787778
+      <= x_1 or x_1+7.805869882872122 <= x_9)) else 0
+  no_overlap_9_16:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_16 != 'NONE' and not (x_9+8.280555812787778
+      <= x_16 or x_16+3.788554880110552 <= x_9)) else 0
+  no_overlap_9_2:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_2 != 'NONE' and not (x_9+8.280555812787778
+      <= x_2 or x_2+7.805869882872122 <= x_9)) else 0
+  no_overlap_9_13:
+    type: intention
+    function: -1000000 if (x_9 != 'NONE' and x_13 != 'NONE' and not (x_9+8.280555812787778
+      <= x_13 or x_13+4.319359283724851 <= x_9)) else 0
+  no_overlap_0_10:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_10 != 'NONE' and not (x_0+7.805869882872122
+      <= x_10 or x_10+8.280555812787778 <= x_0)) else 0
+  no_overlap_0_15:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_15 != 'NONE' and not (x_0+7.805869882872122
+      <= x_15 or x_15+3.788554880110552 <= x_0)) else 0
+  no_overlap_0_11:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_11 != 'NONE' and not (x_0+7.805869882872122
+      <= x_11 or x_11+8.280555812787778 <= x_0)) else 0
+  no_overlap_0_12:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_12 != 'NONE' and not (x_0+7.805869882872122
+      <= x_12 or x_12+4.319359283724851 <= x_0)) else 0
+  no_overlap_0_1:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_1 != 'NONE' and not (x_0+7.805869882872122
+      <= x_1 or x_1+7.805869882872122 <= x_0)) else 0
+  no_overlap_0_16:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_16 != 'NONE' and not (x_0+7.805869882872122
+      <= x_16 or x_16+3.788554880110552 <= x_0)) else 0
+  no_overlap_0_2:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_2 != 'NONE' and not (x_0+7.805869882872122
+      <= x_2 or x_2+7.805869882872122 <= x_0)) else 0
+  no_overlap_0_13:
+    type: intention
+    function: -1000000 if (x_0 != 'NONE' and x_13 != 'NONE' and not (x_0+7.805869882872122
+      <= x_13 or x_13+4.319359283724851 <= x_0)) else 0
+  no_overlap_10_15:
+    type: intention
+    function: -1000000 if (x_10 != 'NONE' and x_15 != 'NONE' and not (x_10+8.280555812787778
+      <= x_15 or x_15+3.788554880110552 <= x_10)) else 0
+  no_overlap_10_11:
+    type: intention
+    function: -1000000 if (x_10 != 'NONE' and x_11 != 'NONE' and not (x_10+8.280555812787778
+      <= x_11 or x_11+8.280555812787778 <= x_10)) else 0
+  no_overlap_10_12:
+    type: intention
+    function: -1000000 if (x_10 != 'NONE' and x_12 != 'NONE' and not (x_10+8.280555812787778
+      <= x_12 or x_12+4.319359283724851 <= x_10)) else 0
+  no_overlap_10_1:
+    type: intention
+    function: -1000000 if (x_10 != 'NONE' and x_1 != 'NONE' and not (x_10+8.280555812787778
+      <= x_1 or x_1+7.805869882872122 <= x_10)) else 0
+  no_overlap_10_16:
+    type: intention
+    function: -1000000 if (x_10 != 'NONE' and x_16 != 'NONE' and not (x_10+8.280555812787778
+      <= x_16 or x_16+3.788554880110552 <= x_10)) else 0
+  no_overlap_10_2:
+    type: intention
+    function: -1000000 if (x_10 != 'NONE' and x_2 != 'NONE' and not (x_10+8.280555812787778
+      <= x_2 or x_2+7.805869882872122 <= x_10)) else 0
+  no_overlap_10_13:
+    type: intention
+    function: -1000000 if (x_10 != 'NONE' and x_13 != 'NONE' and not (x_10+8.280555812787778
+      <= x_13 or x_13+4.319359283724851 <= x_10)) else 0
+  no_overlap_15_11:
+    type: intention
+    function: -1000000 if (x_15 != 'NONE' and x_11 != 'NONE' and not (x_15+3.788554880110552
+      <= x_11 or x_11+8.280555812787778 <= x_15)) else 0
+  no_overlap_15_12:
+    type: intention
+    function: -1000000 if (x_15 != 'NONE' and x_12 != 'NONE' and not (x_15+3.788554880110552
+      <= x_12 or x_12+4.319359283724851 <= x_15)) else 0
+  no_overlap_15_1:
+    type: intention
+    function: -1000000 if (x_15 != 'NONE' and x_1 != 'NONE' and not (x_15+3.788554880110552
+      <= x_1 or x_1+7.805869882872122 <= x_15)) else 0
+  no_overlap_15_16:
+    type: intention
+    function: -1000000 if (x_15 != 'NONE' and x_16 != 'NONE' and not (x_15+3.788554880110552
+      <= x_16 or x_16+3.788554880110552 <= x_15)) else 0
+  no_overlap_15_2:
+    type: intention
+    function: -1000000 if (x_15 != 'NONE' and x_2 != 'NONE' and not (x_15+3.788554880110552
+      <= x_2 or x_2+7.805869882872122 <= x_15)) else 0
+  no_overlap_15_13:
+    type: intention
+    function: -1000000 if (x_15 != 'NONE' and x_13 != 'NONE' and not (x_15+3.788554880110552
+      <= x_13 or x_13+4.319359283724851 <= x_15)) else 0
+  no_overlap_11_12:
+    type: intention
+    function: -1000000 if (x_11 != 'NONE' and x_12 != 'NONE' and not (x_11+8.280555812787778
+      <= x_12 or x_12+4.319359283724851 <= x_11)) else 0
+  no_overlap_11_1:
+    type: intention
+    function: -1000000 if (x_11 != 'NONE' and x_1 != 'NONE' and not (x_11+8.280555812787778
+      <= x_1 or x_1+7.805869882872122 <= x_11)) else 0
+  no_overlap_11_16:
+    type: intention
+    function: -1000000 if (x_11 != 'NONE' and x_16 != 'NONE' and not (x_11+8.280555812787778
+      <= x_16 or x_16+3.788554880110552 <= x_11)) else 0
+  no_overlap_11_2:
+    type: intention
+    function: -1000000 if (x_11 != 'NONE' and x_2 != 'NONE' and not (x_11+8.280555812787778
+      <= x_2 or x_2+7.805869882872122 <= x_11)) else 0
+  no_overlap_11_13:
+    type: intention
+    function: -1000000 if (x_11 != 'NONE' and x_13 != 'NONE' and not (x_11+8.280555812787778
+      <= x_13 or x_13+4.319359283724851 <= x_11)) else 0
+  no_overlap_12_1:
+    type: intention
+    function: -1000000 if (x_12 != 'NONE' and x_1 != 'NONE' and not (x_12+4.319359283724851
+      <= x_1 or x_1+7.805869882872122 <= x_12)) else 0
+  no_overlap_12_16:
+    type: intention
+    function: -1000000 if (x_12 != 'NONE' and x_16 != 'NONE' and not (x_12+4.319359283724851
+      <= x_16 or x_16+3.788554880110552 <= x_12)) else 0
+  no_overlap_12_2:
+    type: intention
+    function: -1000000 if (x_12 != 'NONE' and x_2 != 'NONE' and not (x_12+4.319359283724851
+      <= x_2 or x_2+7.805869882872122 <= x_12)) else 0
+  no_overlap_12_13:
+    type: intention
+    function: -1000000 if (x_12 != 'NONE' and x_13 != 'NONE' and not (x_12+4.319359283724851
+      <= x_13 or x_13+4.319359283724851 <= x_12)) else 0
+  no_overlap_1_16:
+    type: intention
+    function: -1000000 if (x_1 != 'NONE' and x_16 != 'NONE' and not (x_1+7.805869882872122
+      <= x_16 or x_16+3.788554880110552 <= x_1)) else 0
+  no_overlap_1_2:
+    type: intention
+    function: -1000000 if (x_1 != 'NONE' and x_2 != 'NONE' and not (x_1+7.805869882872122
+      <= x_2 or x_2+7.805869882872122 <= x_1)) else 0
+  no_overlap_1_13:
+    type: intention
+    function: -1000000 if (x_1 != 'NONE' and x_13 != 'NONE' and not (x_1+7.805869882872122
+      <= x_13 or x_13+4.319359283724851 <= x_1)) else 0
+  no_overlap_16_2:
+    type: intention
+    function: -1000000 if (x_16 != 'NONE' and x_2 != 'NONE' and not (x_16+3.788554880110552
+      <= x_2 or x_2+7.805869882872122 <= x_16)) else 0
+  no_overlap_16_13:
+    type: intention
+    function: -1000000 if (x_16 != 'NONE' and x_13 != 'NONE' and not (x_16+3.788554880110552
+      <= x_13 or x_13+4.319359283724851 <= x_16)) else 0
+  no_overlap_2_13:
+    type: intention
+    function: -1000000 if (x_2 != 'NONE' and x_13 != 'NONE' and not (x_2+7.805869882872122
+      <= x_13 or x_13+4.319359283724851 <= x_2)) else 0
+  no_overlap_3_4:
+    type: intention
+    function: -1000000 if (x_3 != 'NONE' and x_4 != 'NONE' and not (x_3+7.035273863480027
+      <= x_4 or x_4+7.035273863480027 <= x_3)) else 0
+  no_overlap_3_17:
+    type: intention
+    function: -1000000 if (x_3 != 'NONE' and x_17 != 'NONE' and not (x_3+7.035273863480027
+      <= x_17 or x_17+3.788554880110552 <= x_3)) else 0
+  no_overlap_4_17:
+    type: intention
+    function: -1000000 if (x_4 != 'NONE' and x_17 != 'NONE' and not (x_4+7.035273863480027
+      <= x_17 or x_17+3.788554880110552 <= x_4)) else 0
+  no_overlap_14_8:
+    type: intention
+    function: -1000000 if (x_14 != 'NONE' and x_8 != 'NONE' and not (x_14+4.319359283724851
+      <= x_8 or x_8+9.78422627523168 <= x_14)) else 0
+agents:
+- sat1
+- sat0
+- sat2
