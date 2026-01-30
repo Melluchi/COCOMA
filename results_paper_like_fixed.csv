@@ -1,0 +1,5 @@
+config,seed,algo,time_s,reward,sat_reqs,status
+paper_like_fixed,0,dsa,1.04934481500095,699.5403372505652,27,ok
+paper_like_fixed,0,mgm,1.0563083160013775,699.5403372505652,27,ok
+paper_like_fixed,0,maxsum,1.3834288399993966,699.5403372505652,27,ok
+paper_like_fixed,0,dpop,1.0701636910016532,699.5403372505652,27,ok

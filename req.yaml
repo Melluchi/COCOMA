@@ -1,0 +1,46 @@
+name: s_dcop_req_14
+objective: min
+domains:
+  bin:
+    values:
+    - 0
+    - 1
+variables:
+  x_u3_s2_o2_e58.536:
+    domain: bin
+  x_u2_s0_o3_e51.536:
+    domain: bin
+  x_u1_s1_o4_e71.695:
+    domain: bin
+  x_u1_s1_o1_e51.27:
+    domain: bin
+constraints:
+  cost_x_u3_s2_o2_e58.536:
+    type: intention
+    function: 99.5190350655381 if x_u3_s2_o2_e58.536 == 1 else 0
+  cost_x_u2_s0_o3_e51.536:
+    type: intention
+    function: 59.833917928294596 if x_u2_s0_o3_e51.536 == 1 else 0
+  cost_x_u1_s1_o4_e71.695:
+    type: intention
+    function: 72.35157322903017 if x_u1_s1_o4_e71.695 == 1 else 0
+  cost_x_u1_s1_o1_e51.27:
+    type: intention
+    function: 72.35157322903017 if x_u1_s1_o1_e51.27 == 1 else 0
+  one_obs_for_request:
+    type: intention
+    function: 1000000 if (x_u3_s2_o2_e58.536 + x_u2_s0_o3_e51.536 + x_u1_s1_o4_e71.695
+      + x_u1_s1_o1_e51.27) > 1 else 0
+  cap_s1:
+    type: intention
+    function: 1000000 if (x_u1_s1_o4_e71.695 + x_u1_s1_o1_e51.27) > 153 else 0
+  cap_s2:
+    type: intention
+    function: 1000000 if (x_u3_s2_o2_e58.536) > 101 else 0
+  cap_s0:
+    type: intention
+    function: 1000000 if (x_u2_s0_o3_e51.536) > 139 else 0
+agents:
+- u3
+- u2
+- u1

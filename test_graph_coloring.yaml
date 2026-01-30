@@ -1,0 +1,28 @@
+name: graph_coloring
+objective: min
+
+domains:
+  colors:
+    type: enumerated
+    values: [R, G]
+
+variables:
+  x1:
+    domain: colors
+  x2:
+    domain: colors
+
+constraints:
+  diff:
+    type: intention
+    variables: [x1, x2]
+    function: "10 if x1 == x2 else 0"
+
+agents:
+  a1: {}
+  a2: {}
+
+# distribution des variables aux agents
+distribution:
+  x1: a1
+  x2: a2
